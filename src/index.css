@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
+@custom-variant light (&:where(.light, .light *, [data-theme="light"], [data-theme="light"] *));
+
+:root,
+[data-theme="dark"],
+html.dark {
+  --rk-bg: #0a0f1a;
+  --rk-bg-card: #111827;
+  --rk-text: #f1f5f9;
+  --rk-text-muted: #94a3b8;
+  --rk-blue: #3b82f6;
+  --rk-cyan: #22d3ee;
+  --rk-indigo: #818cf8;
+  --rk-sky: #38bdf8;
+  --rk-border: rgba(255, 255, 255, 0.08);
+  --rk-border-accent: rgba(34, 211, 238, 0.25);
+  --rk-card-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+
+[data-theme="light"],
+html.light {
+  --rk-bg: #f8fafc;
+  --rk-bg-card: #ffffff;
+  --rk-text: #0f172a;
+  --rk-text-muted: #475569;
+  --rk-blue: #3b82f6;
+  --rk-cyan: #22d3ee;
+  --rk-indigo: #818cf8;
+  --rk-sky: #38bdf8;
+  --rk-border: rgba(15, 23, 42, 0.08);
+  --rk-border-accent: rgba(59, 130, 246, 0.25);
+  --rk-card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  color-scheme: light;
+}
+
+@theme {
+  --color-rk-bg: var(--rk-bg);
+  --color-rk-bg-card: var(--rk-bg-card);
+  --color-rk-text: var(--rk-text);
+  --color-rk-text-muted: var(--rk-text-muted);
+  --color-rk-blue: var(--rk-blue);
+  --color-rk-cyan: var(--rk-cyan);
+  --color-rk-indigo: var(--rk-indigo);
+  --color-rk-sky: var(--rk-sky);
+}
+
+@layer base {
+  html {
+    background-color: var(--rk-bg);
+    color: var(--rk-text);
+  }
+  
+  /* RuisuKit glow scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--rk-bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(34, 211, 238, 0.3);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(34, 211, 238, 0.6);
+  }
+}
+
+/* RuisuKit Océano Typography & Gradient utilities */
+.rk-gradient-text {
+  background: linear-gradient(135deg, var(--rk-cyan) 0%, var(--rk-sky) 35%, var(--rk-blue) 70%, var(--rk-indigo) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.rk-ocean-glow {
+  box-shadow: 0 0 30px -5px rgba(34, 211, 238, 0.2);
+}
+
+/* Immersive background pattern with ocean tone */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+}
+
+
+
