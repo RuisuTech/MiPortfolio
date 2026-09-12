@@ -49,4 +49,4 @@ Abre http://localhost:3000
 **Jose Luis Guzman**
 - GitHub: [@RuisuTech](https://github.com/RuisuTech)
 - LinkedIn: [linkedin.com/in/ruisutech](https://www.linkedin.com/in/ruisutech)
-- Web: [joseluisguzman.com](https://www.joseluisguzman.com/)
+- Web: [joseluisguzman.com](https://www.ruisu.tech/)
